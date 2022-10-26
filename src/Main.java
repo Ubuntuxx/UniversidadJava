@@ -1,5 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        var contador1 = 0;
+        do {
+            System.out.println("contador1 = " + contador1);
+            contador1++;
+
+        } while (contador1 < 20);
     }
 }
