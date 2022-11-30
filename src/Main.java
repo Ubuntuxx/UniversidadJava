@@ -1,23 +1,15 @@
+import clases.Persona;
+
 import java.math.*;
 
 public class Main {
     public static void main(String[] args) {
-        for (int i = 0; i < 50; i++) {
-            if (i % 2 != 0) {
-                continue; //ir a la siguiente iteracion
-            }
-            System.out.println("i = " + i);
-        }
-//
-//        for (int i = 0; i < 50; i++) {
-//            if (i % 2 == 0) {
-//                System.out.println("i = " + i);
-//                break;
-//            }
-//        }
-    }
-
-    public static int regreso(int numbrer) {
-        return Math.abs(numbrer);
+        Persona persona1 = new Persona();
+        Persona personnel2 = new Persona();
+        persona1.nombre = "andres";
+        persona1.apellido = "Juarez";
+        persona1.desplegarInfo();
+        System.out.println(persona1);
+        System.out.println(personnel2);
     }
 }
