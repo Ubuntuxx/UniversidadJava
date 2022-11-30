@@ -1,10 +1,23 @@
+import java.math.*;
+
 public class Main {
     public static void main(String[] args) {
-        var contador1 = 0;
-        do {
-            System.out.println("contador1 = " + contador1);
-            contador1++;
+        for (int i = 0; i < 50; i++) {
+            if (i % 2 != 0) {
+                continue; //ir a la siguiente iteracion
+            }
+            System.out.println("i = " + i);
+        }
+//
+//        for (int i = 0; i < 50; i++) {
+//            if (i % 2 == 0) {
+//                System.out.println("i = " + i);
+//                break;
+//            }
+//        }
+    }
 
-        } while (contador1 < 20);
+    public static int regreso(int numbrer) {
+        return Math.abs(numbrer);
     }
 }
