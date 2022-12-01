@@ -1,9 +1,17 @@
 package Operaciones;
 
 public class Aritmetica {
-    int a;
-    int b;
-    
+    public int a;
+    public int b;
+
+    public Aritmetica() {
+        System.out.println("Mensaje desde el constructor");
+    }
+
+    public Aritmetica(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
     //Metodos
 
     public void suma(int a, int b) {
