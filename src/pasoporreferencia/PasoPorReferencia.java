@@ -7,11 +7,12 @@ public class PasoPorReferencia {
         Persona persona = new Persona();
         persona.nombre = "Luis";
         System.out.println("persona nombre= " + persona.nombre);
-        cambiaValor(persona);
+        persona = cambiaValor(persona);
         System.out.println("persona nombre= " + persona.nombre);
     }
 
-    public static void cambiaValor(Persona persona){
+    public static Persona cambiaValor(Persona persona) {
         persona.nombre = "karña";
+        return persona;
     }
 }
