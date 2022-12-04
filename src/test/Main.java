@@ -1,13 +1,15 @@
 package test;
 
-import dominio.Persona;
+import domain.Persona;
 
 public class Main {
     public static void main(String[] args) {
-        Persona persona1 = new Persona("Luis", "amador", 10000, false);
-        persona1.setNombre("Jose");
-        System.out.println(persona1.getNombre());
+        Persona persona = new Persona("Luis");
+        Persona persona2 = new Persona("Carlos");
+        imprimir(persona2);
+    }
 
-        System.out.println(persona1.toString());
+    public static void imprimir(Persona per) {
+        System.out.println("persona = " + per);
     }
 }
