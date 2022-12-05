@@ -5,9 +5,12 @@ public class Empleado extends Persona {
     private double sueldo;
     private static int contadorEmpleado;
 
-    public Empleado(String nombre, double sueldo) {
-        super(nombre);
+    public Empleado(){
         this.idEmpleado = ++contadorEmpleado;
+    }
+    public Empleado(String nombre, double sueldo) {
+        this();
+        this.nombre = nombre;
         this.sueldo = sueldo;
     }
 
@@ -28,7 +31,7 @@ public class Empleado extends Persona {
         StringBuilder sb = new StringBuilder();
         sb.append("Empelado{idEmpleado= ").append(this.idEmpleado);
         sb.append(", sueldo= ").append(this.sueldo);
-        sb.append(", Persona{ ").append(super.toString());
+        sb.append(", ").append(super.toString());
         sb.append("}");
         return sb.toString();
     }
