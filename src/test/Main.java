@@ -4,26 +4,20 @@ import domain.Persona;
 
 public class Main {
     public static void main(String[] args) {
-//        int arr[] = new int[34];
-//        System.out.println("arr = " + arr);
-//
-//        for (int i = 0; i < arr.length; i++) {
-//            arr[i] = i * 3;
-//        }
-//
-//        for (int i = 0; i < arr.length; i++) {
-//            System.out.println("Edades del elemento: " + i + " Valor: " + arr[i]);
-//        }
-        Persona personas[] = new Persona[40];
-        personas[0] = new Persona("fasdf");
-        personas[1] = new Persona("Axel");
+        int edades[][] = new int[5][5];
 
-//        for (int i = 0; i < personas.length; i++) {
-//            System.out.println("Valor guardado = " + personas[i]);
-//        }
+        String frutas[][] = {{"naranja", "Limon"}, {"Fresa", "Zarzamora", "Mora","Melón"}};
 
-        for (Persona persona : personas) {
-            System.out.println("persona = " + persona);
+        for (int i = 0; i < frutas.length; i++) {
+            for (int j = 0; j < frutas[i].length; j++) {
+                System.out.println("Valores de la matriz: " + i + " : " + j + "\t\t" + frutas[i][j]);
+            }
+        }
+
+        for (int ren = 0; ren < edades.length; ren++) {
+            for (int col = 0; col < edades[ren].length; col++) {
+                System.out.println("Edades: " + ren + " : " + col + edades[ren][col]);
+            }
         }
     }
 }
