@@ -1,13 +1,17 @@
+
 package paquete1;
 
 public class ModificadoresAcceso {
-    public String atributo = "Atributo publico";
+    protected String atributo = "Atributo protegido";
 
-    public ModificadoresAcceso(){
-        System.out.println(" Constructor vacio publico" );
+    protected ModificadoresAcceso(){
+        System.out.println("Constructor vacio protegido" );
     }
 
-    public void metodoPublicov(){
-        System.out.println("Metodo publico");
+    public ModificadoresAcceso(String a){
+        System.out.println("Constrictor publico");
+    }
+    protected void metodoProtegido(){
+        System.out.println("Metodo protegido");
     }
 }
