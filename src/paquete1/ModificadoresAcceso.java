@@ -3,16 +3,28 @@
 package paquete1;
 
 public class ModificadoresAcceso {
-    String atributo = "Atributo package";
+    private String atributo = "Atributo private";
 
-    ModificadoresAcceso(){
-        System.out.println("Constructor vacio package" );
+    private ModificadoresAcceso() {
+        System.out.println("Constructor vacio private");
     }
 
-    ModificadoresAcceso(String a){
-        System.out.println("Constrictor package");
+    public ModificadoresAcceso(String a) {
+        this();
+        System.out.println("Constrictor publico");
     }
-    void metodoProtegido(){
-        System.out.println("Metodo package");
+
+    public String getAtributo() {
+        return atributo;
     }
+
+    public void setAtributo(String atributo) {
+        this.atributo = atributo;
+    }
+
+    private void metodoProtegido() {
+        System.out.println("Metodo private");
+    }
+
+
 }

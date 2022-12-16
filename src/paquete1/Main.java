@@ -1,4 +1,3 @@
-
 package paquete1;
 
 import paquete1.ModificadoresAcceso;
@@ -7,7 +6,7 @@ import paquete1.ModificadoresAcceso;
 public class Main {
     public static void main(String[] args) {
         ModificadoresAcceso modificadoresAcceso = new ModificadoresAcceso("Package");
-        System.out.println("modificadoresAcceso.atributo = " + modificadoresAcceso.atributo);
+        System.out.println("modificadoresAcceso.atributo = " + modificadoresAcceso.getAtributo());
         System.out.println(modificadoresAcceso);
 
     }
