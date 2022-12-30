@@ -40,6 +40,8 @@ public class Empleado {
         this.sueldo = sueldo;
     }
 
+
+    //Metodos insertados por medio del IDE, Cada IDE maneja una sintaxis direfente, pero con el mismo objetivo
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -48,6 +50,7 @@ public class Empleado {
         return Double.compare(empleado.sueldo, sueldo) == 0 && Objects.equals(nombre, empleado.nombre) && Objects.equals(departamento, empleado.departamento);
     }
 
+    //Metodos insertados por medio del IDE, Cada IDE maneja una sintaxis direfente, pero con el mismo objetivo
     @Override
     public int hashCode() {
         return Objects.hash(nombre, sueldo);
