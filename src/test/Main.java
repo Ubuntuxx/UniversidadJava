@@ -1,15 +1,32 @@
 package test;
 
-import domain.FiguraGeometrica;
-import domain.Rectangulo;
+import accesodatos.IAccesoDatos;
+import accesodatos.ImplementacionMariaDB;
+import accesodatos.ImplementacionMysql;
 
 public class Main {
     public static void main(String[] args) {
-        Rectangulo rectangulo = new Rectangulo("Circulo");
+        IAccesoDatos datos = new ImplementacionMysql();
 
-        FiguraGeometrica figura = new Rectangulo("Rectangulo");
-        figura.dibujar();
+        imprimir(datos);
 
-        figura.reemplazar();
+        datos = new ImplementacionMariaDB();
+        imprimir(datos);
     }
+
+    public static void imprimir(IAccesoDatos datos){
+        datos.listar();
+    }
+
+    /*
+*
+* Manejo de interfaces
+
+Cuando usar Interface y clases abstractas
+
+Interfaces: Cuando se tiene comportamiento en común
+
+Clases abstractas: Caracteristicas en común
+
+* */
 }
