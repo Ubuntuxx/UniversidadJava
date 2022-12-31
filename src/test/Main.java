@@ -1,32 +1,15 @@
 package test;
 
-import accesodatos.IAccesoDatos;
-import accesodatos.ImplementacionMariaDB;
-import accesodatos.ImplementacionMysql;
+import domain.Persona;
 
 public class Main {
     public static void main(String[] args) {
-        IAccesoDatos datos = new ImplementacionMysql();
+        Persona persona = new Persona();
+        persona.setNombre("Juan");
+        persona.setApellido("Perez");
 
-        imprimir(datos);
-
-        datos = new ImplementacionMariaDB();
-        imprimir(datos);
+        System.out.println("persona = " + persona);
+        System.out.println(" persona nombre = " + persona.getNombre());
+        System.out.println("Persona apellidos = " + persona.getApellido());
     }
-
-    public static void imprimir(IAccesoDatos datos){
-        datos.listar();
-    }
-
-    /*
-*
-* Manejo de interfaces
-
-Cuando usar Interface y clases abstractas
-
-Interfaces: Cuando se tiene comportamiento en común
-
-Clases abstractas: Caracteristicas en común
-
-* */
 }
