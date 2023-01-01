@@ -11,11 +11,14 @@ public class Main {
         int resultado = 0;
         try {
             resultado = divicion(10, 0);
-        } catch (ArithmeticException e) {
-            System.out.println("Ocurri+o un error");
-            e.printStackTrace(System.out);
         } catch (OperacionExcepcion e) {
-            throw new RuntimeException(e);
+            System.out.println("Ocurrio un error de tipo OperacionExcepcion");
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error");
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Se revisó el error");
         }
         System.out.println("resultado " + resultado);
     }
