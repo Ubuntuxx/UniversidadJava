@@ -1,15 +1,22 @@
 package test;
 
-import domain.Persona;
+
+import aritmetica.Aritmetica;
+import excepciones.OperacionExcepcion;
+
+import static aritmetica.Aritmetica.divicion;
 
 public class Main {
     public static void main(String[] args) {
-        Persona persona = new Persona();
-        persona.setNombre("Juan");
-        persona.setApellido("Perez");
-
-        System.out.println("persona = " + persona);
-        System.out.println(" persona nombre = " + persona.getNombre());
-        System.out.println("Persona apellidos = " + persona.getApellido());
+        int resultado = 0;
+        try {
+            resultado = divicion(10, 0);
+        } catch (ArithmeticException e) {
+            System.out.println("Ocurri+o un error");
+            e.printStackTrace(System.out);
+        } catch (OperacionExcepcion e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("resultado " + resultado);
     }
 }
