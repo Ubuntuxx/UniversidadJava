@@ -1,25 +1,25 @@
 package test;
 
-
-import aritmetica.Aritmetica;
-import excepciones.OperacionExcepcion;
-
-import static aritmetica.Aritmetica.divicion;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        int resultado = 0;
-        try {
-            resultado = divicion(10, 0);
-        } catch (OperacionExcepcion e) {
-            System.out.println("Ocurrio un error de tipo OperacionExcepcion");
-            System.out.println(e.getMessage());
-        } catch (Exception e) {
-            System.out.println("Ocurrio un error");
-            System.out.println(e.getMessage());
-        } finally {
-            System.out.println("Se revisó el error");
+        List miList = new ArrayList();
+        miList.add("Lunes");
+        miList.add("Martes");
+        miList.add("Miercoles");
+        miList.add("Jueves");
+        miList.add("Viernes");
+
+        for (Object elemeto : miList) {
+            System.out.println(elemeto);
         }
-        System.out.println("resultado " + resultado);
+
+        System.out.println();
+
+        miList.forEach(elemento -> {
+            System.out.println("Elemento: " + elemento);
+        });
     }
 }
