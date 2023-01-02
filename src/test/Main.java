@@ -12,15 +12,6 @@ public class Main {
         miList.add("Viernes");
         miList.add("Sabado");
 
-//        for (Object elemeto : miList) {
-//            System.out.println(elemeto);
-//        }
-
-
-//        miList.forEach(elemento -> {
-//            System.out.println(elemento);
-//        });
-
         Set miSet = new HashSet();
         miSet.add("Lunes");
         miSet.add("Martes");
@@ -30,13 +21,28 @@ public class Main {
         miSet.add("Sabado");
 
 //        imprime(miSet);
-        System.out.println();
-        imprime(miList);
+//        System.out.println();
+//        imprime(miList);
 
+        Map miMap = new HashMap();
+
+        //Modelo llave valor
+        //         llave      valor
+        miMap.put("Valor1", "Juan");
+        miMap.put("Valor2", "Carlos");
+        miMap.put("Valor3", "Roasario");
+
+        //                              LLAVE
+        System.out.println(miMap.get("Valor1"));
+
+        //para obtener todas la llaves (Solo las llaves)
+        imprime(miMap.keySet());
+
+        //para imprimir valores (Solo los valores)
+        imprime(miMap.values());
     }
 
-    //implementacion de polimorfismo para imprimir el contenido
-    public static void imprime(Collection coleccion){
+    public static void imprime(Collection coleccion) {
         coleccion.forEach(elemento -> {
             System.out.println(elemento);
         });
