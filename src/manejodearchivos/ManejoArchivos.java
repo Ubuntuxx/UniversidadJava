@@ -40,4 +40,21 @@ public class ManejoArchivos {
             e.printStackTrace();
         }
     }
+
+    public static void leerInfo(String nombre) {
+        File archivo = new File(nombre);
+        try {
+            var entrada = new BufferedReader(new FileReader(archivo));
+            var lectura = entrada.readLine();
+            while (lectura != null) {
+                System.out.println(lectura);
+                lectura = entrada.readLine();
+            }
+            entrada.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

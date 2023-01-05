@@ -7,6 +7,7 @@ public class Main {
         String nombre = "Manejo.txt";
 // crearArchivo("Manejo.txt");
         escribirArchivo(nombre, "Siuuu");
-        anexarInfo(nombre,"Qué mira bobo?!");
+        anexarInfo(nombre, "Qué mira bobo?!");
+        leerInfo(nombre);
     }
 }
