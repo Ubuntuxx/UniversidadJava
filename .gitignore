@@ -45,5 +45,6 @@ Thumbs.db
 *.mov
 *.wmv
 
-
+#Text files innecesary
+*.txt
 

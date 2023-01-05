@@ -1,12 +1,12 @@
 package main;
 
-import static manejodearchivos.ManejoArchivos.crearArchivo;
-import static manejodearchivos.ManejoArchivos.escribirArchivo;
+import static manejodearchivos.ManejoArchivos.*;
 
 public class Main {
     public static void main(String[] args) {
-        String nombre = "Manjo.txt";
+        String nombre = "Manejo.txt";
 // crearArchivo("Manejo.txt");
-    escribirArchivo(nombre, "Siuuu");
+        escribirArchivo(nombre, "Siuuu");
+        anexarInfo(nombre,"Qué mira bobo?!");
     }
 }
